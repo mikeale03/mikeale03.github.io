@@ -1,0 +1,158 @@
+.bg-1 {
+  -webkit-background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
+  -webkit-background-size: 100% 100%;
+  -webkit-background-repeat: no-repeat;
+  background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top:51px;
+  -webkit-height:100vh;
+  height:100vh;
+  background-color: gray;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#my-pic {
+  width: 250px;
+  border-radius:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:60px;
+  margin-bottom: 60px;
+}
+#about ul {
+  list-style: none;
+
+}
+#about {
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 40px;
+}
+#about h1{
+  font-family: 'Patua One', cursive;
+  font-size: 2em;
+}
+.social {
+  border-radius:50%;
+  height:50px;
+  width:50px;
+  margin-left:10px;
+  border:solid;
+  box-shadow:none !important;
+}
+
+.center-div {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+h6 {
+  color:white;
+}
+footer {
+  margin-top:30px;
+}
+section {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.img-wrap {
+  /*border: 0.7px solid;
+  height: 350px;
+  width: 350px;
+  outline-color: transparent;
+  transition: outline 0.6s ease-out;*/
+}
+
+/*.img-wrap:hover {
+  outline: gray solid 1px;
+}*/
+.flip-container {
+	-webkit-perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+  perspective: 1000px;
+	transform-style: preserve-3d;
+  margin: 5px auto;
+}
+.flip-container:focus .back {
+  -webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+}
+.flip-container:focus .front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+
+.flip-container, .front, .back {
+	width: 350px;
+	height: 350px;
+}
+
+.flip-container img {
+	width: 100%;
+  border-radius: 10px;
+
+}
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+  transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+  cursor: pointer;
+	z-index: 2;
+	-webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  padding: 10px;
+}
+.back h2 {
+  text-align: center;
+}
+.back div {
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  position: absolute;;
+}
+.back div .git {
+  float: left;
+  margin-left: 10px;
+}
+.back div .site {
+  float: right;
+  margin-right: 10px;
+}
