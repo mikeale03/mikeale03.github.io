@@ -1,6 +1,6 @@
 
 $(function() {
-  $('nav a[href*="#"]:not([href="#"])').click(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -13,6 +13,7 @@ $(function() {
     }
   });
 
+
   $('.nav a').on('click', function() {
     if($('.navbar-toggle').is(':visible') )
       $('.navbar-toggle').click();
@@ -24,15 +25,14 @@ $(function() {
 
   var win = $(window);
   var aboutPos = $("#about").position().top;
-  var portfolioPos = $("#portfolio").position().top;
-  var contactPos = $("#contact").position().top - 500;
+  var portfolioPos = $("#portfolio").position().top-30;
   console.log(aboutPos);
   console.log(portfolioPos);
 
   win.scroll(function() {
-    var yPos = $(this).scrollTop();
+    var yPos = win.scrollTop();
     console.log(yPos);
-    if(yPos >= contactPos) {
+    if($(window).scrollTop() + $(window).height() == document.body.scrollHeight) {
       $(".active").removeClass("active");
       $("#con").addClass("active");
     } else if (yPos >= portfolioPos) {
@@ -43,5 +43,6 @@ $(function() {
       $("#ab").addClass("active");
     }
   });
-
+  
 });
+

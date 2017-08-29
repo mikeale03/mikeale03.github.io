@@ -1,14 +1,15 @@
 .bg-1 {
-  -webkit-background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
+  /*-webkit-background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
   -webkit-background-size: 100% 100%;
   -webkit-background-repeat: no-repeat;
-  background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
+  background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");*/
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  margin-top:51px;
+  margin-top:25px;
   -webkit-height:100vh;
   height:100vh;
   background-color: gray;
+  background: linear-gradient(to top, #222526, #77898e);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -33,9 +34,31 @@
   font-size: 2em;
   padding-bottom: 40px;
 }
-#about h1{
-  font-family: 'Patua One', cursive;
+#about h1 {
+  color: #4ec1d3;
+  font-size: 3.5em;
+}
+#about-div {
+  position: relative;
+}
+#about-div a {
+  position: absolute;
+  bottom: 30px;
+  left:50%;
+  transform: translate(-50%, 0 );
+  z-index: 2;
+  cursor: pointer;
+  color: white;
+}
+#about-div a:hover {
+  color: #4ec1d3;
+}
+h1 {
+  font-family: 'Patua One', Verdana, cursive;
   font-size: 2em;
+}
+.projects {
+  font-size: 3em;
 }
 .social {
   border-radius:50%;
@@ -80,11 +103,11 @@ section {
 	transform-style: preserve-3d;
   margin: 5px auto;
 }
-.flip-container:focus .back {
+.flip-container:hover .back {
   -webkit-transform: rotateY(0deg);
 	transform: rotateY(0deg);
 }
-.flip-container:focus .front {
+.flip-container:hover .front {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -104,7 +127,7 @@ section {
 .flipper {
 	-webkit-transition: 0.6s;
 	-webkit-transform-style: preserve-3d;
-  transition: 0.6s;
+  transition: 0.2s;
 	transform-style: preserve-3d;
 	position: relative;
 
@@ -113,10 +136,10 @@ section {
 /* hide back of pane during swap */
 .front, .back {
 	-webkit-backface-visibility: hidden;
-	-webkit-transition: 0.6s;
+	-webkit-transition: 0.4s;
 	-webkit-transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition: 0.6s;
+  transition: 0.4s ease-in;
   transform-style: preserve-3d;
 	position: absolute;
 	top: 0;
