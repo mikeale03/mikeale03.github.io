@@ -1,3 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, * {
+  font-family: 'Roboto', sans-serif;
+}
+
 .bg-1 {
   /*-webkit-background-image: url("http://www.goworldtravel.com/wp-content/uploads/2015/12/gray-background-3.jpg");
   -webkit-background-size: 100% 100%;
@@ -54,7 +66,6 @@
   color: #4ec1d3;
 }
 h1 {
-  font-family: 'Patua One', Verdana, cursive;
   font-size: 2em;
 }
 .projects {
@@ -85,17 +96,6 @@ section {
   margin: 100px auto;
 }
 
-.img-wrap {
-  /*border: 0.7px solid;
-  height: 350px;
-  width: 350px;
-  outline-color: transparent;
-  transition: outline 0.6s ease-out;*/
-}
-
-/*.img-wrap:hover {
-  outline: gray solid 1px;
-}*/
 .flip-container {
 	-webkit-perspective: 1000px;
 	-webkit-transform-style: preserve-3d;
@@ -178,4 +178,143 @@ section {
 .back div .site {
   float: right;
   margin-right: 10px;
+}
+
+/*###################################*/
+
+/*#####
+  layout 
+ ######*/
+
+body, nav, section {
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  padding: 0px;
+}
+
+.nav__header-container {
+  background-color: black;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  height: 35px;
+  z-index: 1;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 10px;
+  height: 35px;
+  padding: 7px;
+}
+
+#name-container {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.menu-container {
+  background-color: black;
+  height: 35px;
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.hidden-checkbox:checked ~ .menu-container {
+  opacity: 1;
+  height: 75px;
+  transition: 0.4s;
+}
+
+.hidden-checkbox:checked ~ .toggle-menu > .bar1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.hidden-checkbox:checked ~ .toggle-menu > .bar2 {
+  opacity: 0;
+}
+
+.hidden-checkbox:checked ~ .toggle-menu > .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.toggle-menu {
+  position: absolute;
+  display: none;
+  right: 0px;
+  top: 2px;
+}
+
+
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media only screen and (max-width: 600px) {
+  nav li {
+    display: block;
+    padding: 2px 0px;
+    height: 20px;
+    margin: 0px 7px;
+  }
+
+  nav {
+    display: block;
+  }
+
+  #name-container {
+    justify-content: flex-start;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  .menu-container {
+    opacity: 0;
+    height: 0px;
+    
+  }
+  .hidden-checkbox {
+    display: inline;
+    position: absolute;
+    right: 3px;
+    top: 9px;
+    transform: scale(2.5);
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.toggle-menu div {
+  width: 30px;
+  height: 3px;
+  background-color: grey;
+  margin: 6px 0;
+  transition: 0.4s;
 }

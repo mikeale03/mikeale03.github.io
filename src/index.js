@@ -1,17 +1,20 @@
+import './assets/css/custom-style.css'
+import './assets/images/app-launcher.png'
 
 $(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').stop().animate({
-          scrollTop: target.offset().top
-        }, 1000, 'easeInOutExpo');
-        return false;
-      }
-    }
-  });
+
+  // $('a[href*="#"]:not([href="#"])').click(function() {
+  //   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+  //     if (target.length) {
+  //       $('html, body').stop().animate({
+  //         scrollTop: target.offset().top
+  //       }, 1000, 'easeInOutExpo');
+  //       return false;
+  //     }
+  //   }
+  // });
 
 
   $('.nav a').on('click', function() {

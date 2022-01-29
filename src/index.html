@@ -4,39 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michael Alegrado</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-    <link rel="stylesheet" href="custom-style.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type = "button" class = "navbar-toggle"
-            data-toggle = "collapse" data-target = "#example-navbar-collapse">
-              <span class = "sr-only">Toggle navigation</span>
-              <span class = "icon-bar"></span>
-              <span class = "icon-bar"></span>
-              <span class = "icon-bar"></span>
-           </button>
-            <a class="navbar-brand" href="#">Michael Alegrado</a>
+
+    <nav class="bg-black" >
+      <div class="container flex flex justify-between text-white px-10 py-3 mx-auto">
+        <div id="name-container" class="">
+          <a href="#">Michael A. Alegrado</a>
+        </div>
+        <div>
+          <input type="checkbox" class="hidden-checkbox">
+          <div class='toggle-menu'>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
           </div>
-          <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+          <div class="">
+            <ul>
               <li id="ab" class="active"><a href="#about-div" class="scrollable">About</a></li>
               <li id="por"><a href="#portfolio">Portfolio</a></li>
               <li id="con"><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
-      </nav>
-      <div class="container-fluid bg-1" id="about-div">
+      </div>
+    </nav>
+
+    <div class="px-10"></div>
+      <div class="" id="about-div">
         <div id="about">
           <p>
-            Hello! I'am Michael Alegrado
+            Hello! I am Michael Alegrado
           </p>
           <h1>WEB DEVELOPER</h1>
           <p>I love programming and learning</p>
@@ -53,7 +55,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="app-launcher.png" alt="" />
+                  <img src="assets/images/app-launcher.png" alt="" />
                 </div>
                 <div class="back">
                   <h2>App Launcher - Desktop app</h2>
@@ -77,7 +79,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="movie-database.jpg" alt="" />
+                  <img src="assets/images/movie-database.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Movie Database</h2>
@@ -103,7 +105,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="tic tac toe.jpg" alt="" />
+                  <img src="assets/images/tic tac toe.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Tic Tac Toe</h2>
@@ -131,7 +133,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="simon.png" alt="" />
+                  <img src="assets/images/simon.png" alt="" />
                 </div>
                 <div class="back">
                   <h2>Simon game</h2>
@@ -157,7 +159,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="weather.jpg" alt="" />
+                  <img src="assets/images/weather.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Weather App</h2>
@@ -183,7 +185,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="calculator.jpg" alt="" />
+                  <img src="assets/images/calculator.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Calculator</h2>
@@ -211,7 +213,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="wikipedia.jpg" alt="" />
+                  <img src="assets/images/wikipedia.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Wikipedia Viewer</h2>
@@ -236,7 +238,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="twitch.jpg" alt="" />
+                  <img src="assets/images/twitch.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Twitch Tv</h2>
@@ -263,7 +265,7 @@
             <div class="flip-container" tabindex="1">
               <div class="flipper">
                 <div class="img-wrap front">
-                  <img src="pomodoro.jpg" alt="" />
+                  <img src="assets/images/pomodoro.jpg" alt="" />
                 </div>
                 <div class="back">
                   <h2>Pomodoro Clock</h2>
@@ -312,6 +314,7 @@
           </button></a>
         </div>
       </div>
+
     </div>
     <footer class="container-fluid navbar-inverse">
       <h6 class="text-center">made by: Michael Alegrado © 2017.</h6>
@@ -319,6 +322,6 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="main.js" charset="utf-8"></script>
+    <script src="src/index.js" charset="utf-8"></script>
   </body>
 </html>
